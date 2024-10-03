@@ -1,0 +1,138 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+
+---
+<Layout title="example">
+    <div class="container mt-5">
+        <h1 class="text-center">Shopping Cart</h1>
+        <form class="woocommerce-cart-form" action="/checkout" method="post">
+          <table class="table table-bordered cart-table shop_table shop_table_responsive cart woocommerce-cart-form__contents">
+            <thead>
+              <tr>
+                <th class="product-remove">&nbsp;</th>
+                <th class="product-thumbnail">&nbsp;</th>
+                <th class="product-name">Product</th>
+                <th class="product-price">Price</th>
+                <th class="product-quantity">Quantity</th>
+                <th class="product-subtotal">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="cart_item">
+                <td class="product-remove">
+                  <a href="#" class="remove" aria-label="Remove this item">×</a>
+                </td>
+                <td class="product-thumbnail">
+                  <img src="https://websitepromotions.in/astro/wp-content/uploads/2024/08/iconm.svg" alt="Product Image">
+                </td>
+                <td class="product-name">
+                  <a href="#">Name analysis with suggested names</a>
+                </td>
+                <td class="product-price">
+                  <span class="woocommerce-Price-amount">₹10,000.00</span>
+                </td>
+                <td class="product-quantity">
+                  <input type="number" class="form-control" value="1" min="0" step="1">
+                </td>
+                <td class="product-subtotal">
+                  <span class="woocommerce-Price-amount">₹10,000.00</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      
+          <div class="actions">
+            <div class="coupon">
+              <input type="text" class="form-control" name="coupon_code" id="coupon_code" placeholder="Coupon code">
+              <button type="submit" class="btn btn-primary" name="apply_coupon">Apply</button>
+            </div>
+            <button type="submit" class="btn btn-secondary mt-3" name="update_cart">Update Cart</button>
+          </div>
+        </form>
+      
+        <div class="cart-collaterals mt-5">
+          <div class="alert alert-info">
+            Have a coupon? <a href="#" class="showcoupon">Click here to enter your code</a>
+          </div>
+          <form class="checkout_coupon woocommerce-form-coupon" method="post" style="display:none">
+            <p>If you have a coupon code, please apply it below.</p>
+            <div class="form-row">
+              <input type="text" class="form-control" name="coupon_code" placeholder="Coupon code">
+              <button type="submit" class="btn btn-success mt-2">Apply coupon</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+
+      <script type="text/javascript">
+        $(document).ready(function () {
+          $('.showcoupon').click(function (e) {
+            e.preventDefault();
+            $('.checkout_coupon').slideToggle();
+          });
+        });
+      </script>
+      
+      <style>
+        .cart-table {
+          margin-top: 20px;
+        }
+    
+        .cart-table th, .cart-table td {
+          text-align: center;
+          vertical-align: middle;
+        }
+    
+        .product-thumbnail img {
+          max-width: 50px;
+          height: auto;
+        }
+    
+        .woocommerce-Price-amount {
+          font-weight: bold;
+        }
+    
+        .quantity input[type="number"] {
+          width: 60px;
+          text-align: center;
+        }
+    
+        .coupon {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 20px;
+        }
+    
+        .coupon input {
+          width: 70%;
+          margin-right: 10px;
+        }
+    
+        @media (max-width: 768px) {
+          .product-name, .product-price, .product-quantity, .product-subtotal {
+            display: block;
+            text-align: left;
+          }
+    
+          .cart-table th, .cart-table td {
+            display: block;
+            width: 100%;
+            text-align: left;
+          }
+    
+          .cart-table th {
+            display: none;
+          }
+    
+          .coupon input {
+            width: 100%;
+            margin-bottom: 10px;
+          }
+        }
+      </style>
+
+
+</Layout>

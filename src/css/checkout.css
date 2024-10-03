@@ -1,0 +1,139 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* about banner starts here  */
+.about-text {
+  margin-top: 200px;
+  font-size: 33px;
+  font-family: "Playfair Display", serif;
+  color: #f28123;
+  text-decoration: none;
+}
+.Banner-bg {
+  background-image: url(../../src/Assets/Images/bgm.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.Banner-area {
+  height: 100%;
+  position: relative;
+  height: 400px;
+}
+
+.Banner-area:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #120604;
+  opacity: 0.2;
+  z-index: -1;
+}
+@media (min-width: 360px) and (max-width: 600px) {
+  .about-text {
+    margin-top: 200px;
+    font-size: 25px;
+    font-family: "Playfair Display", serif;
+    color: #f28123;
+    text-decoration: none;
+  }
+table
+{
+    margin-left: -20px;
+}
+}
+/* banner ends here  */
+
+
+
+
+
+
+
+.btn-primary {
+    background-color: #FFA500;
+    border-color: #FFA500;
+}
+.btn-primary:hover {
+    background-color: #FF8C00;
+    border-color: #FF8C00;
+}
+.btn-warning {
+    background-color: #FFA500;
+    border-color: #FFA500;
+    color: #fff;
+}
+.btn-warning:hover {
+    background-color: #FF8C00;
+    border-color: #FF8C00;
+    color: #fff;
+}
+.btn-success {
+    background-color: #32CD32;
+    border-color: #32CD32;
+}
+.btn-success:hover {
+    background-color: #228B22;
+    border-color: #228B22;
+}
+.table thead th {
+    background-color: #FFA500;
+    color: #fff;
+}
+
+
+
+
+.bg-light-purple {
+    background-color: #f1f0f5;
+  }
+  .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+  }
+  .btn-warning:hover {
+    background-color: #ffca2c;
+    border-color: #ffc720;
+  } 
+
+
+
+
+
+
+
+  .bg-dark {
+    background-color: #1a1a2e !important;
+  }
+  .text-orange {
+    color: #ff6b35;
+  }
+  .border-orange {
+    border-color: #ff6b35 !important;
+  }
+  .btn-orange {
+    background-color: #ff6b35;
+    border-color: #ff6b35;
+  }
+  .btn-orange:hover {
+    background-color: #e55a2b;
+    border-color: #e55a2b;
+  }
+
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }

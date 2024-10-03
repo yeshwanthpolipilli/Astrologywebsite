@@ -1,0 +1,144 @@
+---
+import Layout from "../layouts/Layout.astro"
+import '../../src/css/branding.css'
+---
+
+<Layout title="Astro-Branding">
+    <div class="Banner-area Banner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-white my-auto d-flex  justify-content-center fw-bold about-text">
+                    <a class="nav-link about-text" href="/">Home /</a> <a class="about-text text-white" href="/about"> &nbsp; Astro Staffing</a>
+                   </div>
+        </div>
+    </div> 
+</div>  
+
+
+
+ 
+
+
+ <!-- barnding 3 starts here  -->
+
+
+ <div class="container-fluid back-img">
+    <div class="container p-4">
+        <div class="row gy-3">
+         
+
+            <div class="col-lg-8 p-2" id="main">
+                <div class="header-bg text-center p-3">ASTRO-Staffing
+
+
+
+                </div>
+                <div class="header-bg2 p-2">
+                    <p class="para">
+                        Head Hunting or employing able employees for a company has become the most important job in the leading corporate circles. All big corporates and multinationals have woken up to the fact and have started taking help of Corporate Astrologer for picking up the right person for the right job.
+
+
+
+                    </p>
+                    <h5 class="we-give">We Help in Selecting the Right Candidates for Your Company:
+
+                    </h5>
+                
+                    <ol type="a">
+               <p>By Detailed Astrological & Numerological Analysis we do Corporate Employee Scanning i.e.
+
+                   </p>
+                
+                     <div class="px-3">
+                  
+                        <li>
+                            Identifying their strengths & weaknesses.
+                
+                        </li>
+                       
+                      <li>
+                        Their Capability to handle a particular portfolio.
+ 
+                      </li>
+                      <li>Their Reliability in terms of handling the responsibilities in an honest & committed way.
+
+
+                      </li>
+                      <li>
+                        Their overall nature & temperament indicating factors like job satisfaction & organizational commitment.
+
+                      </li>
+                     </div>
+                      </ul>  
+                 
+
+                
+              
+                <div>
+                        <h5 class="we-give">Deliverables:
+                        </h5>
+                        <p>
+                            Comprehensive Analysis Report having the Corporate Employee Scanning of the prospective candidate with the detailed analysis on the described parameters.
+
+
+                            
+                
+                
+                        </p>
+                </div>
+                    </div>
+                        </div>
+                        <div class="col-lg-4 p-2" id="sidebar">
+                            <div class="header-bg p-3 text-center">
+                                Corporate Employee Scan (Per Person)
+            
+                     
+                                 </div>
+                             <div class="header-bg2  p-4 text-center" id="header">
+                                
+                                 <strike class="text-center fs-4">
+                                     (₹21000)
+                                     </strike>
+                                     <p class="text-center pt-5 fs-4">
+                                        ₹10000
+                                    </p>
+                                      <div class="text-center p-2">
+                                         <!-- <button type="submit" class="btn-24">Buy now</button> -->
+                                         <button type="submit" class="btn-24 buyNowBtn" data-product="  Corporate Employee Scan (Per Person)" data-price="10000 ">Buy now</button>
+            
+                                      </div>
+                                      <div class="text-center mt-2">
+                                         <img class="w-100 text-center" src="../../src/Assets/Images/staff.jpg" alt="">
+                                      </div>
+                             </div>
+                          
+            
+                         </div>
+                      
+        </div>
+      
+    </div>
+</div>
+
+ <!-- barnding 3 ends here  -->
+
+
+ <script type="text/javascript">
+    const buyNowBtns = document.querySelectorAll('.buyNowBtn');
+
+    buyNowBtns.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const product = e.target.getAttribute('data-product');
+            const price = e.target.getAttribute('data-price');
+            // window.location.href = /checkout?product=${encodeURIComponent(product)}&price=${encodeURIComponent(price)};
+            window.open(`/checkout?product=${encodeURIComponent(product)}&price=${encodeURIComponent(price)}`);
+        });
+    });
+</script>
+
+
+
+
+
+
+</Layout>

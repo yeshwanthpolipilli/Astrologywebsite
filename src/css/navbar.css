@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Basic styles for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EEEBE6;
+    position: relative;
+    height: 80px;
+    z-index: 99;
+}
+
+.navbar-toggler {
+    order: 1; /* Ensure the hamburger appears first on the left */
+    border: none;
+}
+
+.navbar-brand {
+    order: 2; /* Ensure the logo appears on the right */
+    margin-left: auto;
+}
+
+.logo {
+    width: 80px;
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    z-index: 99;
+}
+.all-content
+{
+    margin-left: 50px;
+}
+.navbar-collapse {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    background-color: #EEEBE6; /* Background color for the navbar menu when collapsed */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+
+.nav-item {
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative; /* To allow underline effect */
+}
+
+.nav-link {
+    color: #921B00;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    padding-bottom: 10px;
+    padding-left: 30px !important;
+}
+
+/* Brown underline animation */
+
+
+/* Media query for screens smaller than 992px */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        text-align: left;
+        padding: 0.5rem;
+    }
+
+    .navbar-nav {
+        display: block;
+    }
+
+    .nav-item {
+        padding: 10px 0;
+    }
+
+    .logo {
+        width: 70px;
+        position: relative;
+        top: 20%;
+        left: 0;
+        margin-left: auto;
+    }
+}
+
+/* Logo style */
+.logo-container {
+    margin-left: auto;
+}
+/* Initially hide the submenu */
+.Business-submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 101%; /* Positions submenu to the right of the parent */
+    z-index: 1000;
+    min-width: 200px; /* Adjust the width as needed */
+}
+
+/* Show submenu when hovered */
+ .Business-submenu {
+    display: block;
+    background-color: white;
+}
+
+/* Dropdown styling */
+/* Hide the dropdown-submenu by default */
+.dropdown-submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Position submenu to the right of the parent */
+    background-color: white; /* Background color of the submenu */
+    color: #921B00; /* Text color of the submenu */
+    min-width: 200px; /* Adjust the width as needed */
+
+}
+
+/* Style for submenu items */
+.dropdown-submenu a {
+    color: #921B00; /* Text color for submenu items */
+    padding: 8px 16px; /* Padding for submenu items */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Hover effect for submenu items */
+.dropdown-submenu a:hover {
+    background-color: #f8f9fa; /* Light background on hover */
+    color: #921B00; /* Maintain text color on hover */
+    
+}
+
+/* Show the dropdown menu on click */
+.show {
+    display: block;
+}
+
+
+@media (min-width:360px) and (max-width:550px) 
+{
+    .dropdown-submenu {
+        display: block;
+        background-color: white;
+        position: absolute;
+        top: 70%;
+        left: 10%;
+        z-index: 99;
+    }
+}
+
+ @media (min-width:551px) and (max-width:993px)
+{
+    .navbar-collapse {
+        order: 2;
+        width: 200px;
+        display: flex;
+        justify-content: start;
+        background-color: #EEEBE6; 
+    }
+    .dropdown-submenu {
+        display: block;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left:70%;
+        z-index: 99;
+    }
+} 
+@media (min-width:992px) and (max-width:1400px)
+ {
+    .nav-link
+    {
+        font-size: 13px !important;
+        
+    }
+    .logo{
+        width: 60px;
+      margin-left: -60px;
+      top: 20%;
+    }
+    
+}

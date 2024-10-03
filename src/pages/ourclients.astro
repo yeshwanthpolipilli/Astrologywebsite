@@ -1,0 +1,137 @@
+---
+import Layout from "../layouts/Layout.astro"
+import '../../src/css/ourclients.css'
+---
+<Layout title="Our Clients">
+
+    <div class="Banner-area Banner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-white my-auto d-flex fs-4 justify-content-center fw-bold about-text">
+                    <a class="nav-link about-text" href="/">Home /</a><a class="about-text" href="/about">&nbsp; Our Clients</a>
+                   </div>
+        </div>
+    </div> 
+</div>  
+<div class="container-fluid">
+    <div class="container my-5">
+        <div class="row gallery">
+          <!-- 26 images displayed in 4 columns per row -->
+          <!-- Repeated image structure -->
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client1.jpg" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <!-- Repeat similar blocks for each image -->
+          <!-- Example placeholders for 26 images -->
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client2.jpg" alt="Image 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client3.jpg" alt="Image 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client4.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+
+
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client5.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client6.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client7.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client8.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client9.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client10.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client11.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client12.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client13.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client14.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client15.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client16.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client17.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client18.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client19.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client20.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client21.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client22.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client23.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client24.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <img src="../../src/Assets/Images/client25.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          </div>
+
+
+
+
+
+
+
+
+          <!-- Repeat up to 26 images -->
+          <!-- Continue the row/col structure for remaining images -->
+        </div>
+      </div>
+      
+      <!-- Modal Structure -->
+      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img id="modalImage" src="" class="img-fluid" alt="Selected Image">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<script type="text/javascript">
+    // Function to display clicked image in the modal
+    function showImage(element) {
+      var modalImage = document.getElementById("modalImage");
+      modalImage.src = element.src;
+    }
+  </script>
+
+</Layout>

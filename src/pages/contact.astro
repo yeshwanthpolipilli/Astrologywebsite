@@ -1,0 +1,314 @@
+---
+import Layout from "../layouts/Layout.astro";
+import '../css/contact.css'
+---
+
+
+<Layout title="contact" >
+
+    <div class="Banner-area Banner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-white my-auto d-flex fs-3 justify-content-center fw-bold about-text">
+                    <a class="nav-link about-text" href="/">Home  /</a> <a class="about-text text-white" href="/about">&nbsp; Contact us</a>
+                   </div>
+        </div>
+    </div> 
+</div>  
+
+    <!-- end hero area -->
+ 
+<div class="container-fluid back-img">
+    <div class="container-fluid position-relative p-5 ">
+        <div class="container p-sm-5">
+          <div class="row mx-auto">
+            <div class="col-lg-5 p-5 mx-auto" id="gapper">
+              <form id="contactForm" class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">First Name</label>
+                  <input
+                    type="text"
+                    name="firstName"
+                    class="form-control inputs-class rounded-3"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Last Name</label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    class="form-control rounded-3"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Phone Number</label>
+                  <input
+                    type="text"
+                    name="mobileNumber"
+                    class="form-control inputs-class rounded-3"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control rounded-3"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Your Message</label>
+                  <textarea
+                    name="message"
+                    class="form-control rounded-3 email-class"
+                    id="exampleFormControlTextarea1"
+                    required
+                  ></textarea>
+                </div>
+                <div class="col-12 text-center">
+        
+                    <button type="submit" class="btn-24">Send Message</button>
+
+                </div>
+              </form>
+            </div>
+            <div class="col-lg-6 align-self-center head1">
+              <h3 class="contact-heading we">
+                Get in touch today
+              </h3>
+              <p class="contact-sub-heading">
+                Connecting is just the beginning. Reach out, and let's start a conversation.
+              </p>
+              <div class="pt-2">
+                <div class=" text-colorheader">
+                  <span class="icon-mail fs-5"><i class="bi bi-envelope"></i></span>&nbsp;
+                  <span class="text-dark fs-5"> contact@company.com</span>
+                </div>
+                <div class="my-3">
+                  <div class="fs-5 text-colorheader">
+                    <span class="icon-phone fs-5"><i class="bi bi-telephone"></i></span>&nbsp;
+                    <span class="text-dark fs-5"> (123) 456 - 789</span>
+                  </div>
+                </div>
+                <div class="fs-5 text-colorheader">
+                  <span class="icon-location fs-5"><i class="bi bi-geo-alt"></i></span>&nbsp;
+                  <span class="text-dark fs-5"> Your Location Here</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container-fluid position-relative p-5">
+        <div class="container w-100">
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.1672416783545!2d78.38921417493626!3d17.45170768344647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a9b5bb0a23a0f59%3A0xb2aa1b27fe3ba045!2sGenamplify%20Solutions%20Hub%20PVT%20LTD.!5e0!3m2!1sen!2sin!4v1717479221310!5m2!1sen!2sin"
+              class="map-iframe"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        // Form validation
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+
+      
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</Layout>

@@ -1,0 +1,397 @@
+ /* global css Stylings  */
+ @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+*
+{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+font-family: "DM Sans", sans-serif;
+
+}
+
+  a:hover {
+    color: #f28123;
+    text-decoration: none;
+  }
+  
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    margin: 0 0 1.25rem 0;
+    color: #051922;
+  }
+  
+  h1:last-child,
+  .h1:last-child,
+  h2:last-child,
+  .h2:last-child,
+  h3:last-child,
+  .h3:last-child,
+  h4:last-child,
+  .h4:last-child,
+  h5:last-child,
+  .h5:last-child,
+  h6:last-child,
+  .h6:last-child {
+    margin: 0;
+  }
+  
+  h1,
+  .h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4rem;
+  }
+  
+  @media only screen and (max-width: 767.96px) {
+    h1,
+    .h1 {
+      font-size: 3rem;
+      line-height: 3.25rem;
+    }
+    .marg {
+      margin-top: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 575.96px) {
+    h1,
+    .h1 {
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+    }
+  }
+  
+  h2,
+  .h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+  }
+  
+  @media only screen and (max-width: 767.96px) {
+    h2,
+    .h2 {
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+    }
+  }
+  
+  @media only screen and (max-width: 575.96px) {
+    h2,
+    .h2 {
+      font-size: 2rem;
+      line-height: 2.25rem;
+    }
+  }
+  
+  h3,
+  .h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+  }
+  
+  @media only screen and (max-width: 575.96px) {
+    h3,
+    .h3 {
+      font-size: 1.75rem;
+      line-height: 2rem;
+    }
+  }
+  
+  h4,
+  .h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+  }
+  
+  @media only screen and (max-width: 575.96px) {
+    h4,
+    .h4 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+  }
+  
+  h5,
+  .h5 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+  }
+  
+  h6,
+  .h6 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+  }
+  
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.1px;
+    line-height: 1.8;
+    color: #051922;
+    margin: 0 0 1.25rem 0;
+  }
+  
+  p:last-child {
+    margin: 0;
+  }
+ 
+
+
+/* about banner starts here  */
+
+.Banner-bg {
+    background-image: url('../../src/Assets/Images/bgm.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+
+  .Banner-area {
+    height: 100%;
+    position: relative;
+    height: 400px;
+  }
+  
+
+  .Banner-area:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #120604;
+    opacity: 0.2;
+    z-index: -1;
+    }
+  
+.earth
+{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.about-text
+{
+  margin-top: 183px;
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
+  color: #f28123;
+  text-decoration: none;
+}
+@media (min-width:360px) and (max-width:640px)
+ {
+  .astrology-text
+{
+  margin-top: 50px;
+}
+
+
+}
+@media (min-width:640px) and (max-width:990px)
+ {
+  .astrology-text
+{
+  margin-top: 50px;
+}
+
+
+}
+
+
+.abtus-text
+{
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #490300;
+}
+.about-bg {
+  background-image: url(../Assets/Images/background.png);
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  background-position: right left;
+}
+
+
+
+.rotate-image {
+  animation: rotate 25s infinite;
+}
+.rotate-image:hover
+{
+  animation-play-state: paused;
+
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.max-main
+{
+  max-width: 1100px;
+
+}
+.choose
+{
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #490300;
+}
+
+.text-k
+{
+  position: absolute;
+  left: 60%;
+  font-size: 30px;
+  color: white;
+  font-weight: 800;
+  margin-top: 20px !important;
+}
+
+ .choose-bg
+{
+  background-image: url(../Assets/Images/background.png);
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  background-position: right left;
+} 
+.img-choose
+{
+  width: 400px;
+}
+
+@media (min-width: 360px) and (max-width: 500.96px) {
+
+  .about-bg {
+    background-image: url(../Assets/Images/background.png);
+    width: 100%;
+    height: 1050px;
+    object-fit: cover;
+    background-position: right left;
+  }
+  .rotate-image
+  {
+    width: 260px !important;
+  }
+.img-choose
+{
+  width: 300px;
+}
+.choose-bg
+{
+  background-image: url(../Assets/Images/background.png);
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  background-position: right left;
+} 
+
+}
+@media (min-width: 501px) and (max-width: 599.96px) {
+
+  .about-bg {
+    background-image: url(../Assets/Images/background.png);
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+    background-position: right left;
+  }
+  .rotate-image
+  {
+    width: 300px !important;
+  }
+
+.img-choose
+{
+  width: 300px;
+}
+.choose-bg
+{
+  background-image: url(../Assets/Images/background.png);
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  background-position: right left;
+} 
+}
+@media (min-width: 600px) and (max-width: 899.96px) {
+
+  .about-bg {
+    background-image: url(../Assets/Images/background.png);
+    width: 100%;
+    height: 1000px;
+    object-fit: cover;
+    background-position: right left;
+  }
+  .choose-bg
+{
+  background-image: url(../Assets/Images/background.png);
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  background-position: right left;
+} 
+  .rotate-image
+  {
+    width: 400px !important;
+  }
+}
+@media (min-width:768px) and (max-width:1000px) {
+
+  .about-bg {
+    background-image: url(../Assets/Images/background.png);
+    width: 100%;
+    height: 1000px;
+    object-fit: cover;
+    background-position: right left;
+  }
+  .rotate-image
+  {
+    width: 400px !important;
+  }
+  .choose-bg
+{
+  background-image: url(../Assets/Images/background.png);
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  background-position: right left;
+} 
+}
+
+@media (min-width: 994px) and (max-width: 1450.96px) {
+
+  .about-text
+  {
+    font-size: 40px !important;
+  }
+}

@@ -1,0 +1,134 @@
+---
+import '../../src/css/navbar.css' 
+---
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light back-img1 position-relative p-3">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand logo-container" href="">
+            <img src="../../src/Assets/Images/corplogo.png" alt="logo" class="d-inline-block align-top logo">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About Corp Astro
+                    </a>
+                    <div class="dropdown-menu all-content" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/about">About Us</a>
+                        <a class="dropdown-item" href="/ourteam">Our Team</a>
+                        <a class="dropdown-item" href="/ourclients">Our Clients</a>
+                        <a class="dropdown-item" href="/testimonials">Testimonials
+                        </a>
+
+
+                    </div>
+                </li>
+                <li class="nav-item dropdown" id="servicesDropdownContainer">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Our Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <a class="dropdown-item" href="#" id="businessConsulting">Business Consulting</a>
+                        <a class="dropdown-item" href="/personal" id="Personal">Personal Consulting</a>
+                        <!-- Submenu for Business Consulting -->
+                        <div class="dropdown-submenu" id="businessSubmenu">
+                            <a class="dropdown-item" href="/astro-branding">Astro Branding</a>
+                            <a class="dropdown-item" href="/astro-management">Astro Management</a>
+                            <a class="dropdown-item" href="/astro-staffing">Astro Staffing</a>
+                            <a class="dropdown-item" href="/vastu-shastra">Vastu & Vibrations At Your Workplace</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/diagnostic">⁠Astro Business Diagnostic Report
+                    </a>
+                </li>
+                <li class="nav-item z-3">
+                    <a class="nav-link" href="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+    const servicesDropdown = document.querySelector('#servicesDropdown');
+    const dropdownMenu = servicesDropdown.nextElementSibling;
+    const businessConsulting = document.querySelector('#businessConsulting');
+    const businessSubmenu = document.querySelector('#businessSubmenu');
+    const hoverDistance = 10; // Distance in pixels
+
+    let isSubmenuVisible = false;
+    let timeout;
+
+    function showSubmenu() {
+        businessSubmenu.style.display = 'block';
+        isSubmenuVisible = true;
+    }
+  
+
+    function hideSubmenu() {
+        businessSubmenu.style.display = 'none';
+        isSubmenuVisible = false;
+    }
+
+    function isMouseNear(x, y, element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            x >= rect.left - hoverDistance &&
+            x <= rect.right + hoverDistance &&
+            y >= rect.top - hoverDistance &&
+            y <= rect.bottom + hoverDistance
+        );
+    }
+
+    // Toggle the main dropdown on click
+    servicesDropdown.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        dropdownMenu.classList.toggle('show'); // Toggle the dropdown visibility
+    });
+
+    // Show submenu on hover
+    businessConsulting.addEventListener('mouseover', showSubmenu);
+    businessSubmenu.addEventListener('mouseover', showSubmenu);
+    Personal.addEventListener('mouseover',hideSubmenu)
+
+    // Hide submenu if moving far away
+    document.addEventListener('mousemove', function(event) {
+        if (isSubmenuVisible) {
+            if (!isMouseNear(event.clientX, event.clientY, businessConsulting) &&
+                !isMouseNear(event.clientX, event.clientY, businessSubmenu)) {
+                timeout = setTimeout(hideSubmenu, 10);
+            } else {
+                clearTimeout(timeout);
+            }
+        }
+    });
+
+    // Hide dropdown if clicking elsewhere
+    document.addEventListener('click', function(event) {
+        if (!servicesDropdown.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove('show');
+        }
+    });
+});
+
+
+
+</script>
+
+
+<script>
+    
+</script>
+
+

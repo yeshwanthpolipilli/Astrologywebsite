@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+*
+{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+font-family: "DM Sans", sans-serif;
+
+}
+
+.back-img {
+  background-image: url(../Assets/Images/background.png);
+  width: 100%;
+  object-fit: cover;
+  background-position: right left;
+}
+/* about banner starts here  */
+.about-text
+{
+  margin-top: 183px;
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
+  color: #f28123;
+  text-decoration: none;
+}
+.Banner-bg {
+    background-image: url(https://kamleshyadav.com/html/astrology/version-1/images/content/breadcrumb_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+
+  .Banner-area {
+    height: 100%;
+    position: relative;
+    height: 400px;
+
+  }
+  .team
+  {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    font-weight: 600;
+
+  }
+
+  .Banner-area:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #120604;
+    opacity: 0.2;
+    z-index: -1;
+  }
+
+
+.form-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.form-control, .form-select {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #007bff;
+    box-shadow: none;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.invalid-feedback {
+    font-size: 14px;
+    color: #dc3545;
+}
+
+.img-fluid {
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .col-lg-6 {
+        margin-bottom: 20px;
+    }
+}
+.mainbg{
+    background-color: #eeeaea;
+  
+  }
+
+
+  /* contact Banner css  */
+
+  
+  /* global css Stylings  */
+
+  html {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    height: 100%;
+  }
+  
+  body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.1px;
+    line-height: 1.8;
+    color: #051922;
+    overflow-x: hidden;
+  }
+  
+  body img {
+    max-width: 100%;
+  }
+  
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  a:hover {
+    color: #f28123;
+    text-decoration: none;
+  }
+  
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    margin: 0 0 1.25rem 0;
+    color: #051922;
+  }
+  
+  h1:last-child,
+  .h1:last-child,
+  h2:last-child,
+  .h2:last-child,
+  h3:last-child,
+  .h3:last-child,
+  h4:last-child,
+  .h4:last-child,
+  h5:last-child,
+  .h5:last-child,
+  h6:last-child,
+  .h6:last-child {
+    margin: 0;
+  }
+  
+  h1,
+  .h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4rem;
+  }
+  
+  @media only screen and (max-width: 767.96px) {
+    h1,
+    .h1 {
+      font-size: 3rem;
+      line-height: 3.25rem;
+    }
+    .marg {
+      margin-top: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 575.96px) {
+    h1,
+    .h1 {
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+    }
+  }
+  
+  h2,
+  .h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+  }
+  
+  @media only screen and (max-width: 767.96px) {
+    h2,
+    .h2 {
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+    }
+  }
+  
+  @media only screen and (max-width: 575.96px) {
+    h2,
+    .h2 {
+      font-size: 2rem;
+      line-height: 2.25rem;
+    }
+  }
+  
+  h3,
+  .h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+  }
+  
+  @media only screen and (max-width: 575.96px) {
+    h3,
+    .h3 {
+      font-size: 1.75rem;
+      line-height: 2rem;
+    }
+  }
+  
+  h4,
+  .h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+  }
+  
+  @media only screen and (max-width: 575.96px) {
+    h4,
+    .h4 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+  }
+  
+  h5,
+  .h5 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+  }
+  
+  h6,
+  .h6 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+  }
+  
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.1px;
+    line-height: 1.8;
+    color: #051922;
+    margin: 0 0 1.25rem 0;
+  }
+  
+  p:last-child {
+    margin: 0;
+  }
+  
+
+
+/* *
+{
+    margin: 0%;
+    padding: 0%;
+} */
+.text-colorheader {
+    color: #ff7624;
+  }
+  @media (min-width:360px) and (max-width:640px)  
+   {
+    .form-control, .form-select {
+      font-family: "DM Sans", sans-serif;
+      font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 8px;
+        transition: border-color 0.3s ease;
+    }
+    #gapper
+    {
+      padding-right: 40px !important;
+    }
+
+  }
+#gapper
+{
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.3);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+
+.map-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, green, orange) 1;
+  pointer-events: none;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+.Green4
+{
+   background-color: green;
+    width:300px;
+    height: 200px;
+    position: absolute;
+    z-index: -99;
+    border-radius: 50%;
+    filter: blur(180px);
+left: 5%;
+  top: 20%;
+}
+
+.we
+{
+  font-size: 30px !important;
+  line-height: 1.2;
+  font-weight: 500;
+  font-weight: 700;
+  color: #df6d4d;
+
+}
+.contact-sub-heading
+{
+  font-size: 20px;
+  font-family: "DM Sans", sans-serif;
+}
+.Orange4
+{
+    background-color: orange;
+    width:300px;
+    height: 200px;
+    position: absolute;
+  left:5% ;
+    z-index: -99;
+    border-radius: 50%;
+    filter: blur(300px);
+    bottom: 30px;
+ 
+}
+.Green3
+{
+   background-color: green;
+    width:300px;
+    height: 200px;
+    position: absolute;
+    z-index: -99;
+    border-radius: 50%;
+    filter: blur(190px);
+  left: 15%;
+  top: 20%;
+}
+.differentcolor
+{
+    background-color: orange;
+    width:300px;
+    height: 200px;
+    position: absolute;
+  right: 15%;
+    z-index: -99;
+    border-radius: 50%;
+    filter: blur(200px);
+    bottom: 50px;
+ 
+}
+
+  /* banner button read more starts here  */
+
+.btn-24,
+.btn-24 *,
+.btn-24 :after,
+.btn-24 :before,
+.btn-24:after,
+.btn-24:before {
+  border: none;
+  box-sizing: border-box;
+}
+.head1
+{
+  margin-top: 50px;
+}
+.btn-24 {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #000;
+  background-image: none;
+  border: none !important;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px !important;
+  font-weight: 500;
+  line-height: 2.;
+  width: 200px;
+  margin: 0;
+  mask-image: radial-gradient(circle, #000, #000);
+  -webkit-mask-image: radial-gradient(circle, #000, #000); /* Add vendor prefix if you need WebKit compatibility */
+    padding: 0;
+}
+.btn-24:disabled {
+  cursor: default;
+}
+.btn-24:-moz-focusring {
+  outline: auto;
+}
+.btn-24 svg {
+  display: block;
+}
+.btn-24 [hidden] {
+  display: none;
+}
+.btn-24 {
+  --background: #EC4400;
+  background: none;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+  font-size: 10px;
+}
+.btn-24 span {
+  display: block;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+.btn-24:after,
+.btn-24:before {
+  --tilt: 20px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: -webkit-clip-path 0.2s ease;
+  transition: clip-path 0.2s ease;
+  transition: clip-path 0.2s ease, -webkit-clip-path 0.2s ease;
+  width: 100%;
+  z-index: -1;
+}
+.btn-24:after {
+  --thickness: 5px;
+  background: var(--background);
+  height: calc(100% - var(--thickness) * 2);
+  left: var(--thickness);
+  top: var(--thickness);
+  width: calc(100% - var(--thickness) * 2);
+}
+.btn-24:hover span {
+  transform: translateX(-20px);
+}
+.btn-24:hover:after,
+.btn-24:hover:before {
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 50%,
+    calc(100% - var(--tilt)) 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 50%,
+    calc(100% - var(--tilt)) 100%,
+    0 100%
+  );
+}
+/* banner button read more ends here  */
+@media (min-width: 994px) and (max-width: 1450.96px) {
+
+  .about-text
+  {
+    font-size: 40px !important;
+  }
+}
+  
+  
+  

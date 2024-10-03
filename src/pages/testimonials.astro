@@ -1,0 +1,109 @@
+---
+import Layout from "../layouts/Layout.astro"
+import '../css/testimonials.css'
+---
+<Layout title="Testimonials">
+
+    <div class="Banner-area Banner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-white my-auto d-flex fs-3 justify-content-center fw-bold about-text">
+                    <a class="nav-link about-text" href="/">Home  /</a> <a class="about-text text-white" href="/about">&nbsp;Testimonials</a>
+                   </div>
+        </div>
+    </div> 
+</div>  
+
+<div class="container-fluid back-img">
+    <div class="container pt-5 text-center">
+        <div class="row gx-2 gy-5">
+            <div class="col-lg-6">
+                <iframe width="538" height="359" src="https://www.youtube.com/embed/vFBJMrXj8HU" title="At Corp Astro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-6">
+                <iframe width="538" height="359" src="https://www.youtube.com/embed/HVgH9kNt6W4" title="Corp Astro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-5">
+        <div class="container my-5">
+            <div class="row gallery">
+              <!-- 26 images displayed in 4 columns per row -->
+              <!-- Repeated image structure -->
+              <div class="col-md-3 col-sm-6 mb-4">
+                <img src="../../src/Assets/Images/testimon1.jpg" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+              </div>
+              <!-- Repeat similar blocks for each image -->
+              <!-- Example placeholders for 26 images -->
+              <div class="col-md-3 col-sm-6 mb-4">
+                <img src="../../src/Assets/Images/testimon2.jpg" alt="Image 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+              </div>
+              <div class="col-md-3 col-sm-6 mb-4">
+                <img src="../../src/Assets/Images/testimon3.jpg" alt="Image 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+              </div>
+              <div class="col-md-3 col-sm-6 mb-4">
+                <img src="../../src/Assets/Images/testimon4.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+              </div>
+    
+    
+    
+              <div class="col-md-3 col-sm-6 mb-4">
+                <img src="../../src/Assets/Images/testimon5.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+              </div>
+          
+              <div class="col-md-3 col-sm-6 mb-4">
+                <img src="../../src/Assets/Images/testimon6.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+              </div>
+          
+              <div class="col-md-3 col-sm-6 mb-4">
+                <img src="../../src/Assets/Images/testimon7.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+              </div>
+          
+    
+    
+    
+    
+    
+    
+    
+    
+              <!-- Repeat up to 26 images -->
+              <!-- Continue the row/col structure for remaining images -->
+            </div>
+          </div>
+          
+          <!-- Modal Structure -->
+          <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <img id="modalImage" src="" class="img-fluid" alt="Selected Image">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<script type="text/javascript">
+    // Function to display clicked image in the modal
+    function showImage(element) {
+      var modalImage = document.getElementById("modalImage");
+      modalImage.src = element.src;
+    }
+  </script>
+
+
+
+</Layout>

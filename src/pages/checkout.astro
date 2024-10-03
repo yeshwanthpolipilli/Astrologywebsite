@@ -1,0 +1,293 @@
+---
+// src/pages/checkout.astro
+import "../../src/css/checkout.css";
+import Layout from "../layouts/Layout.astro";
+
+---
+<Layout title="Checkout">
+    <div class="Banner-area Banner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-white my-auto d-flex  justify-content-center fw-bold about-text">
+                    <a class="nav-link about-text" href="/">Home /</a> <a class="about-text text-white" href="/about"> &nbsp; Checkout</a>
+                   </div>
+        </div>
+    </div> 
+</div>  
+<div class="container-fluid back-img">
+
+<div class="container mt-5">
+   <div class="row">
+<div class="col-md-12">
+     <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody id="cartItems">
+            <!-- Cart items will be dynamically generated -->
+        </tbody>
+    </table>
+</div>
+   </div>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <input type="text" id="couponCode" class="form-control" placeholder="Coupon code">
+        </div>
+        <div class="col-md-4">
+            <button id="applyCoupon" class="btn btn-warning w-100">APPLY</button>
+        </div>
+    </div>
+    <div class="text-end mb-3">
+        <button id="updateCart" class="btn btn-primary">UPDATE CART</button>
+    </div>
+</div>
+
+<!-- Billing Details Section -->
+<div class="container mt-5">
+    <h1 class="mb-4 text-danger">Billing Details</h1>
+    <form id="billingForm">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="firstName" class="form-label text-danger">First Name</label>
+                <input type="text" class="form-control" id="firstName" required>
+            </div>
+            <div class="col-md-6">
+                <label for="lastName" class="form-label text-danger">Last Name</label>
+                <input type="text" class="form-control" id="lastName" required>
+            </div>
+            <div class="col-md-6">
+                <label for="companyName" class="form-label text-danger">Company Name (Optional)</label>
+                <input type="text" class="form-control" id="companyName">
+            </div>
+            <div class="col-md-6">
+                <label for="country" class="form-label text-danger">Country / Region</label>
+                <select class="form-select" id="country" required>
+                    <option selected>India</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <label for="streetAddress" class="form-label text-danger">Street Address</label>
+                <input type="text" class="form-control mb-2" id="streetAddress" placeholder="House number and street name" required>
+                <input type="text" class="form-control" id="apartmentUnit" placeholder="Apartment, suite, unit, etc. (optional)">
+            </div>
+            <div class="col-md-6">
+                <label for="townCity" class="form-label text-danger">Town / City</label>
+                <input type="text" class="form-control" id="townCity" required>
+            </div>
+            <div class="col-md-6">
+                <label for="state" class="form-label text-danger">State</label>
+                <select class="form-select" id="state" required>
+                    <option selected>Telangana</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="pinCode" class="form-label text-danger">PIN Code</label>
+                <input type="text" class="form-control" id="pinCode" required>
+            </div>
+            <div class="col-md-6">
+                <label for="phone" class="form-label text-danger">Phone</label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <div class="col-12">
+                <label for="email" class="form-label text-danger">Email Address</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+        </div>
+
+        <!-- Order Summary Section -->
+        <div class="container mt-5">
+            <h1>Your Order</h1>
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="orderSummaryTable">
+                    <!-- Order summary items will be dynamically generated here -->
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Subtotal</h4>
+                </div>
+                <div class="col-md-6 text-end">
+                    <h4 id="totalSubtotal"></h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Total</h4>
+                </div>
+                <div class="col-md-6 text-end">
+                    <h4 id="totalAmount"></h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------------ -->
+
+        <div class="container mt-5">
+            <h2 class="mb-3">Cash on delivery</h2>
+            <div class="bg-light p-3 mb-4">
+                <p class="mb-0">Pay with cash upon delivery.</p>
+            </div>
+            <p class="text-muted mb-4">
+                Your personal data will be used to process your order, support your experience
+                throughout this website, and for other purposes described in our <a href="#" class="text-decoration-none">Privacy Policy</a>.
+            </p>
+        </div>
+
+        <div class="text-end mt-4">
+            <button type="submit" class="btn btn-warning text-white px-4 py-2" id="placeOrderBtn">PLACE ORDER</button>
+        </div>
+    </form>
+</div>
+
+   
+</div>
+
+
+<script type="text/javascript">
+    const billingForm = document.getElementById('billingForm');
+
+    billingForm.addEventListener('submit', function(event) {
+        // Prevent the form from submitting right away
+        event.preventDefault();
+
+        // Check if all fields are valid
+        if (billingForm.checkValidity()) {
+            // All fields are valid, submit the form or perform any action
+            alert('Order placed successfully!');
+            // You can also submit the form here using billingForm.submit() if needed.
+        } else {
+            // If the form is not valid, show an error message
+            alert('Please fill in all required fields.');
+            billingForm.reportValidity();  // This will trigger HTML5 validation prompts
+        }
+    });
+
+
+
+     const cartItemsElement = document.getElementById('cartItems');
+    const orderSummaryTable = document.getElementById('orderSummaryTable');
+    const totalSubtotalElement = document.getElementById('totalSubtotal');
+    const totalAmountElement = document.getElementById('totalAmount');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Get product details from URL query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const product = urlParams.get('product');
+    const price = parseInt(urlParams.get('price'), 10);
+
+    // Add product to cart if passed in URL
+    if (product && !isNaN(price)) {
+        const existingProduct = cart.find(item => item.product === product);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            cart.push({ product, price, quantity: 1 });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCart(); // Trigger rendering after adding product
+    }
+
+    // Function to render cart items
+    function renderCart() {
+        cartItemsElement.innerHTML = '';
+        cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        if (cart.length === 0) {
+            cartItemsElement.innerHTML = '<tr><td colspan="6" class="text-center">Cart is empty</td></tr>';
+            updateOrderSummary();
+            return;
+        }
+
+        cart.forEach((item, index) => {
+            const subtotal = item.quantity * item.price;
+            cartItemsElement.innerHTML += `
+              
+            <tr>
+                    <td>
+                        <button class="btn btn-warning rounded-circle p-2 deleteBtn" data-index="${index}" aria-label="Cancel">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </button>
+                    </td>
+                    <td  class='main'>${item.product}</td>
+                    <td class='main1'>₹${item.price.toLocaleString('en-IN')}</td>
+                    <td><input type="number" data-index="${index}" class="quantityInput" value="${item.quantity}" min="1" style="width: 70px;"></td>
+                    <td class="subtotal">₹${subtotal.toLocaleString('en-IN')}</td>
+                </tr>
+            `;
+        });
+
+        addEventListeners(); // Reattach event listeners after re-rendering
+        updateOrderSummary(); // Update the order summary
+    }
+
+    // Add event listeners for quantity inputs and delete buttons
+    function addEventListeners() {
+        document.querySelectorAll('.quantityInput').forEach(input => {
+            input.addEventListener('change', (e) => {
+                const index = e.target.getAttribute('data-index');
+                const newQuantity = parseInt(e.target.value, 10);
+                cart[index].quantity = newQuantity;
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCart();
+            });
+        });
+
+        document.querySelectorAll('.deleteBtn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const index = e.target.getAttribute('data-index');
+                cart.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCart();
+            });
+        });
+    }
+
+    // Function to update order summary
+    function updateOrderSummary() {
+        orderSummaryTable.innerHTML = '';
+
+        if (cart.length === 0) {
+            totalSubtotalElement.innerText = '₹0';
+            totalAmountElement.innerText = '₹0';
+            return;
+        }
+
+        let totalSubtotal = 0;
+        cart.forEach((item) => {
+            const subtotal = item.quantity * item.price;
+            totalSubtotal += subtotal;
+
+            orderSummaryTable.innerHTML += `
+                <tr>
+                    <td>${item.product}</td>
+                    <td>${item.quantity}</td>
+                    <td>₹${subtotal.toLocaleString('en-IN')}</td>
+                </tr>
+            `;
+        });
+
+        totalSubtotalElement.innerText = `₹${totalSubtotal.toLocaleString('en-IN')}`;
+        totalAmountElement.innerText = `₹${totalSubtotal.toLocaleString('en-IN')}`;
+    }
+
+    renderCart();
+</script>
+
+
+</Layout>
+ 
